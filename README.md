@@ -1,9 +1,13 @@
 # m4ch-anticheat
 
-FiveM Anti-Cheat
+16.02.2022 Planlanan güncellemeler:
 
-Log part works fine, kicks in gas station explosion situations.
+1-) Blacklist araclara güncelleme gelecek adminler dahi spawnlayamayacak. 
+2-) Rastgele ban atma sorunu çözülecek.
+3-) Log sistemi detaylandırılacak.
+4-) Resmon düşürülecek.
 
-I will update daily.
+Protection level 7/10.
 
-Protection level 4/10.
+
+# Detaylar
