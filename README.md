@@ -1,30 +1,24 @@
 # m4ch-anticheat
 
-16.02.2022 Planlanan güncellemeler:
-
-1-) Blacklist araclara güncelleme gelecek adminler dahi spawnlayamayacak. 
-
-2-) Rastgele ban atma sorunu çözülecek.
-
-3-) Log sistemi detaylandırılacak.
-
-4-) Resmon düşürülecek.
-
 Protection level 7/10.
 
+# Setup - Kurulum
 
-# İleride Gelecek Güncellemeler
+1-) Download the file from github. - Dosyayı github üzerinden indirin.
 
-1-) Artık sadece kodlardan oluşmayacak database sistemi getirilecek ve global ban sistemi oluşturulacak. 
+2-) You create a webhook in a channel on your Discord server and paste the link into the webhook section in "config.lua". - Discord sunucunuzda bir kanal'a webhook oluşturarak linki config.lua içerisinde bulunan webhook kısmına yapıştırıyorsunuz.
 
-2-) Anti dump olayı gelecek ve scriptleriniz güvende olacak.
+3-) You start the script by typing "ensure m4ch-anticheat" into the server.cfg file in your package. - Paketinizde bulunan server.cfg dosyasına "ensure m4ch-anticheat" yazarak scripti startlıyorsunuz.
 
-3-) Blacklist car dışında 3.parti hile menülerinden araç ve ped spawn koruması getirilecek. 
+4-) You can then start your server. - Daha sonra sunucunuzu başlatabilirsiniz.
 
-4-) Log sistemine büyük bir log detayı eklenecek çok daha fazla detay görebileceksiniz.
 
-5-) GTAV dosyaları içinde değiştirilmiş silah hasarları engellenecek.
+# Future Plans - Gelecek Güncellemeler
 
-6-) Sunucuda ekli olmayan silahlardan kişi öldürüldüğünde kişi banlanacak.
+1-) Turkish language log system - Türkçe log sistemi
 
-7-) AC'ye artık konsolda restrart atılamayacak (güvenlik amaçlı) sunucu restartlanmalı.
+2-) Special damage tuned weapons will be blocked - Hasarları oynanmış silahlar engellenecek
+
+3-) Removing the car from the mod menu will be completely blocked - Mod menülerden araç çıkarma tamamen engellenecek.
+
+4-) And more.. - Ve daha fazlası..
