@@ -7,10 +7,10 @@ PerformHttpRequest(Config.DiscordWebhook, function(err, text, headers) end, 'POS
             ['icon_url'] = 'https://cdn.discordapp.com/attachments/870246085938020421/885491043867451412/image.png'
         },
         ['footer'] = {
-            ['text'] = 'mac 1.2'
+            ['text'] = 'm4ch-anticheat 1.2'
         },
-        ['color'] = 020202,
-        ['description'] = 'Anticheat Active.',
+        ['color'] = 12914,
+        ['description'] = 'Anticheat Active',
         ['timestamp'] = os.date('!%Y-%m-%dT%H:%M:%SZ')
     }}
 }), {['Content-Type'] = 'application/json' })
@@ -24,7 +24,7 @@ AddEventHandler('entityCreated', function(entity)
                     local src = NetworkGetEntityOwner(entity)
                     local xPlayer = ESX.GetPlayerFromId(src)
                     if Config.AntiPropLog then
-                        dclog(xPlayer, 'Blacklist Prop, Prop: '..blacklistedProps..'\n**Prop:** https://plebmasters.de/?search='..blacklistedProps..'&app=objects \n**Google:** https://www.google.com/search?q='..blacklistedProps..' \n **Mwojtasik:** https://mwojtasik.dev/tools/gtav/objects/search?name='..blacklistedProps)
+                        dclog(xPlayer, 'Blacklist Prop Removed Prop: '..blacklistedProps..'\n**Prop:** https://plebmasters.de/?search='..blacklistedProps..'&app=objects \n**Google:** https://www.google.com/search?q='..blacklistedProps..' \n **Mwojtasik:** https://mwojtasik.dev/tools/gtav/objects/search?name='..blacklistedProps)
                     end
                     if Config.AntiPropDrop then
                         xPlayer.kick(Config.KickMessage)
@@ -40,7 +40,7 @@ AddEventHandler('entityCreated', function(entity)
                     local src = NetworkGetEntityOwner(entity)
                     local xPlayer = ESX.GetPlayerFromId(src)
                     if Config.AntiVehLog then
-                        dclog(xPlayer, 'Blacklist Car Spawn: '..blacklistedVeh..'\n **Car Image:** https://www.gtabase.com/search?searchword='..blacklistedVeh)
+                        dclog(xPlayer, 'Blacklist Vehicle Spawned: '..blacklistedVeh..'\n **The tool the cheater is trying to take out:** https://www.gtabase.com/search?searchword='..blacklistedVeh)
                     end
                     if Config.AntiVehDrop then
                         xPlayer.kick(Config.KickMessage)
@@ -56,7 +56,7 @@ AddEventHandler('entityCreated', function(entity)
                     local src = NetworkGetEntityOwner(entity)
                     local xPlayer = ESX.GetPlayerFromId(src)
                     if Config.AntiPedLog then
-                        dclog(xPlayer, 'Blacklist Ped Çıkarmaya Çalıştı Ped İsmi: '..blacklistedPed..'\n **Ped Görseli:** https://docs.fivem.net/peds/'..blacklistedPed..'.png')
+                        dclog(xPlayer, 'Blacklist Ped Spawned Name of ped: '..blacklistedPed..'\n **Picture of the Ped:** https://docs.fivem.net/peds/'..blacklistedPed..'.png')
                     end
                     if Config.AntiPedDrop then
                         xPlayer.kick(Config.KickMessage)
@@ -79,7 +79,7 @@ Citizen.CreateThread(function()
                 local xPlayer = ESX.GetPlayerFromId(src)
 
                 if Config.AntiEventLog then
-                    dclog(xPlayer, 'Blacklist Event: '..v)
+                    dclog(xPlayer, 'Blacklisted event triggered Event: '..v)
                 end
                 if Config.AntiEventDrop then
                     xPlayer.kick(Config.KickMessage)
@@ -99,7 +99,7 @@ AddEventHandler('explosionEvent',function(source, ev)
         end
         if Config.AntiExplosionLog then
             if Config.BlackListExplosions[ev.explosionType].log then
-                dclog(xPlayer, 'An Object Exploded! Explosive Substance Name: '..Config.BlackListExplosions[ev.explosionType].name)
+                dclog(xPlayer, 'Explosive Material Created! Name of Explosive Substance: '..Config.BlackListExplosions[ev.explosionType].name)
             end
         end
         if Config.AntiExplosionDrop then
@@ -110,12 +110,11 @@ AddEventHandler('explosionEvent',function(source, ev)
     end
 end)
 
-
 AddEventHandler("playerConnecting", function(playerName, setKickReason)
 	for name in pairs(Config.BlacklistNick) do
 		if(string.gsub(string.gsub(string.gsub(string.gsub(playerName:lower(), "-", ""), ",", ""), "%.", ""), " ", ""):find(Config.BlacklistNick[name])) then
-			print(playerName .. " kicklendi!")
-			setKickReason("Name Invalid Enter Correct Name!")
+			print(playerName .. " kicked!")
+			setKickReason("Your Name Is Not Valid Edit Your STEAM Name!")
 			CancelEvent()
 			break
 		end
@@ -166,17 +165,17 @@ function dclog(xPlayer, text)
           ['footer'] = {
               ['text'] = 'm4ch-anticheat 1.2'
           },
-          ['color'] = c91010,
+          ['color'] = 12914,
           ['timestamp'] = os.date('!%Y-%m-%dT%H:%M:%SZ')
         }}
       }
-    text = '**Açıklama:** ' ..text..'\n**ID**: '..tonumber(xPlayer.source)..'\n**Steam Hex:** '..xPlayer.identifier..'\n **Oyuncunun Adı:** '..xPlayer.getName()
+    text = '**Description:** ' ..text..'\n**ID**: '..tonumber(xPlayer.source)..'\n**Steam:** '..xPlayer.identifier..'\n **Player IC Name:** '..xPlayer.getName()
     if identifierDiscord ~= nil then
         text = text..'\n**Discord:** <@'..string.sub(identifierDiscord, 9)..'>'
         identifierDiscord = nil
     end
     if identifierIp ~= nil then
-        text = text..'\n**IP Adresi:** '..string.sub(identifierIp, 4)
+        text = text..'\n**IP Adress:** '..string.sub(identifierIp, 4)
         identifierIp = nil
     end
     data['embeds'][1]['description'] = text
@@ -198,16 +197,13 @@ function Sanitize(str)
 		end)
 end
 
-
-AddEventHandler('onResourceStart', function(resource)
-	if resource == GetCurrentResourceName() then
-		Citizen.Wait(5000)
-		print('$$$$      $$$$  $$        $$$$$$$$$  $$      $$')
-		print('$$ $$    $$ $$  $$        $$         $$      $$')
-		print('$$  $$  $$  $$  $$        $$         $$      $$')
-		print('$$   $$$$   $$  $$$$$$$$  $$         $$$$$$$$$$')
-		print('$$          $$        $$  $$         $$      $$')
-		print('$$          $$        $$  $$         $$      $$')
-		print('$$          $$        $$  $$$$$$$$$  $$      $$')
-	end
-end)
+print("^3[M4CH] ^0AC ACTIVE")
+print([[
+^2
+$$$$      $$$$  $$        $$$$$$$$$  $$      $$
+$$ $$    $$ $$  $$        $$         $$      $$
+$$  $$  $$  $$  $$        $$         $$      $$
+$$   $$$$   $$  $$$$$$$$  $$         $$$$$$$$$$
+$$          $$        $$  $$         $$      $$
+$$          $$        $$  $$$$$$$$$  $$      $$
+^0]])

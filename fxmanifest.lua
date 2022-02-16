@@ -10,6 +10,5 @@ client_scripts {
 server_scripts {
 	'config.lua',
 	'server/main.lua',
-	'server/vpn/antivpn.lua'
---	'server/mainEN'  ( If you want to translate to English, delete (server/main.lua) and activate (server/mainEN )
+	'server/vpn/antivpn.lua' 
 }
