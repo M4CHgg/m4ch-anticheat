@@ -22,3 +22,5 @@ Protection level 7/10.
 3-) Removing the car from the mod menu will be completely blocked - Mod menülerden araç çıkarma tamamen engellenecek.
 
 4-) And more.. - Ve daha fazlası..
+
+https://discord.gg/2mf8yZXaEC
