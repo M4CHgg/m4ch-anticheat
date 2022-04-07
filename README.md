@@ -1,20 +1,4 @@
-# m4ch-anticheat
-
-<<<<<<< HEAD
 Protection level 6/10.
-
-# Setup
-
-1-) Download the file from github.
-
-2-) You create a webhook in a channel on your Discord server and paste the link into the webhook section in "config.lua".
-
-3-) You start the script by typing "ensure m4ch-anticheat" into the server.cfg file in your package.
-
-4-) You can then start your server.
-
-https://discord.gg/2mf8yZXaEC
-
 
 # qb-anticheat
 Anticheat System For QB-Core
@@ -36,18 +20,3 @@ Anticheat System For QB-Core
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>
-=======
-Protection level 7/10.
-
-# Setup
-
-1-) Download the file from github.
-
-2-) You create a webhook in a channel on your Discord server and paste the link into the webhook section in "config.lua".
-
-3-) You start the script by typing "ensure m4ch-anticheat" into the server.cfg file in your package.
-
-4-) You can then start your server.
-
-https://discord.gg/2mf8yZXaEC
->>>>>>> e11a554f48d6675e6c897351793cc80456e37951
