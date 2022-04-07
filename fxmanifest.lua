@@ -1,14 +1,14 @@
-fx_version 'adamant'
-
+fx_version 'cerulean'
 game 'gta5'
 
-client_scripts {
-	'config.lua',
-	'client/main.lua'
+description 'QB-Anticheat'
+version '1.0.0'
+
+shared_script 'config.lua'
+client_script 'client/main.lua'
+server_scripts {
+	'@oxmysql/lib/MySQL.lua',
+	'server/main.lua'
 }
 
-server_scripts {
-	'config.lua',
-	'server/main.lua',
-	'server/vpn/antivpn.lua' 
-}
+lua54 'yes'

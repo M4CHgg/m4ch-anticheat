@@ -1,30 +1,37 @@
 # m4ch-anticheat
 
-16.02.2022 Planlanan güncellemeler:
+Protection level 6/10.
 
-1-) Blacklist araclara güncelleme gelecek adminler dahi spawnlayamayacak. 
+# Setup
 
-2-) Rastgele ban atma sorunu çözülecek.
+1-) Download the file from github.
 
-3-) Log sistemi detaylandırılacak.
+2-) You create a webhook in a channel on your Discord server and paste the link into the webhook section in "config.lua".
 
-4-) Resmon düşürülecek.
+3-) You start the script by typing "ensure m4ch-anticheat" into the server.cfg file in your package.
 
-Protection level 7/10.
+4-) You can then start your server.
+
+https://discord.gg/2mf8yZXaEC
 
 
-# İleride Gelecek Güncellemeler
+# qb-anticheat
+Anticheat System For QB-Core
 
-1-) Artık sadece kodlardan oluşmayacak database sistemi getirilecek ve global ban sistemi oluşturulacak. 
+# License
 
-2-) Anti dump olayı gelecek ve scriptleriniz güvende olacak.
+    QBCore Framework
+    Copyright (C) 2021 Joshua Eger
 
-3-) Blacklist car dışında 3.parti hile menülerinden araç ve ped spawn koruması getirilecek. 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
 
-4-) Log sistemine büyük bir log detayı eklenecek çok daha fazla detay görebileceksiniz.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
 
-5-) GTAV dosyaları içinde değiştirilmiş silah hasarları engellenecek.
-
-6-) Sunucuda ekli olmayan silahlardan kişi öldürüldüğünde kişi banlanacak.
-
-7-) AC'ye artık konsolda restrart atılamayacak (güvenlik amaçlı) sunucu restartlanmalı.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>
