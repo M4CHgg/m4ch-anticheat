@@ -29,12 +29,12 @@ Config.BlacklistedEvents = {
 
 Config.BlacklistedProps = {
     's_m_m_movallien_01',
-},
+}
 
 Config.BlacklistedPeds = {
     'a_m_m_acult_01',
-},
+}
 
 Config.BlacklistedVehicles = {
     'cargoplane',
-},
+}
